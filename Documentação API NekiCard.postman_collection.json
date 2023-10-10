@@ -1,0 +1,1372 @@
+{
+	"info": {
+		"_postman_id": "be643e5c-7aa0-4519-8bde-4339a9866844",
+		"name": "Documentação API NekiCard",
+		"description": "Contact Support:\n Name: NekiCard",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "27334909"
+	},
+	"item": [
+		{
+			"name": "collaborators",
+			"item": [
+				{
+					"name": "updateAvatar",
+					"item": [
+						{
+							"name": "{email}",
+							"item": [
+								{
+									"name": "update Avatar",
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "{{bearerToken}}",
+													"type": "string"
+												}
+											]
+										},
+										"method": "PUT",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											},
+											{
+												"key": "Accept",
+												"value": "*/*"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"photo\": \"<string>\"\n}",
+											"options": {
+												"raw": {
+													"headerFamily": "json",
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/collaborators/updateAvatar/:email",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"collaborators",
+												"updateAvatar",
+												":email"
+											],
+											"variable": [
+												{
+													"key": "email",
+													"value": "<string>"
+												}
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "OK",
+											"originalRequest": {
+												"method": "PUT",
+												"header": [
+													{
+														"key": "Content-Type",
+														"value": "application/json"
+													},
+													{
+														"key": "Accept",
+														"value": "*/*"
+													},
+													{
+														"description": "Added as a part of security scheme: bearer",
+														"key": "Authorization",
+														"value": "Bearer <token>"
+													}
+												],
+												"body": {
+													"mode": "raw",
+													"raw": "{\n  \"photo\": \"<string>\"\n}",
+													"options": {
+														"raw": {
+															"headerFamily": "json",
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{baseUrl}}/collaborators/updateAvatar/:email",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"collaborators",
+														"updateAvatar",
+														":email"
+													],
+													"variable": [
+														{
+															"key": "email"
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "*/*"
+												}
+											],
+											"cookie": [],
+											"body": "<string>"
+										}
+									]
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "collaborator",
+					"item": [
+						{
+							"name": "{id}",
+							"item": [
+								{
+									"name": "get Collaborator Details",
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "*/*"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/collaborators/collaborator/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"collaborators",
+												"collaborator",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "<long>"
+												}
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "OK",
+											"originalRequest": {
+												"method": "GET",
+												"header": [
+													{
+														"key": "Accept",
+														"value": "*/*"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/collaborators/collaborator/:id",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"collaborators",
+														"collaborator",
+														":id"
+													],
+													"variable": [
+														{
+															"key": "id"
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "*/*"
+												}
+											],
+											"cookie": [],
+											"body": "{\n  \"id\": \"<long>\",\n  \"fullName\": \"<string>\",\n  \"socialName\": \"<string>\",\n  \"birthDate\": \"<dateTime>\",\n  \"email\": \"<string>\",\n  \"photo\": \"<string>\",\n  \"telephone\": \"<string>\",\n  \"linkedin\": \"<string>\",\n  \"gitHub\": \"<string>\",\n  \"instagram\": \"<string>\",\n  \"facebook\": \"<string>\"\n}"
+										}
+									]
+								},
+								{
+									"name": "collaborator Data Update",
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "{{bearerToken}}",
+													"type": "string"
+												}
+											]
+										},
+										"method": "PUT",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											},
+											{
+												"key": "Accept",
+												"value": "*/*"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"fullName\": \"<string>\",\n  \"socialName\": \"<string>\",\n  \"birthDate\": \"<dateTime>\",\n  \"email\": \"<string>\",\n  \"photo\": \"<string>\",\n  \"telephone\": \"<string>\",\n  \"linkedin\": \"<string>\",\n  \"gitHub\": \"<string>\",\n  \"instagram\": \"<string>\",\n  \"facebook\": \"<string>\"\n}",
+											"options": {
+												"raw": {
+													"headerFamily": "json",
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/collaborators/collaborator/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"collaborators",
+												"collaborator",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "<long>"
+												}
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "OK",
+											"originalRequest": {
+												"method": "PUT",
+												"header": [
+													{
+														"key": "Content-Type",
+														"value": "application/json"
+													},
+													{
+														"key": "Accept",
+														"value": "*/*"
+													},
+													{
+														"description": "Added as a part of security scheme: bearer",
+														"key": "Authorization",
+														"value": "Bearer <token>"
+													}
+												],
+												"body": {
+													"mode": "raw",
+													"raw": "{\n  \"fullName\": \"<string>\",\n  \"socialName\": \"<string>\",\n  \"birthDate\": \"<dateTime>\",\n  \"email\": \"<string>\",\n  \"photo\": \"<string>\",\n  \"telephone\": \"<string>\",\n  \"linkedin\": \"<string>\",\n  \"gitHub\": \"<string>\",\n  \"instagram\": \"<string>\",\n  \"facebook\": \"<string>\"\n}",
+													"options": {
+														"raw": {
+															"headerFamily": "json",
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{baseUrl}}/collaborators/collaborator/:id",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"collaborators",
+														"collaborator",
+														":id"
+													],
+													"variable": [
+														{
+															"key": "id"
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "*/*"
+												}
+											],
+											"cookie": [],
+											"body": "{\n  \"id\": \"<long>\",\n  \"fullName\": \"<string>\",\n  \"socialName\": \"<string>\",\n  \"birthDate\": \"<dateTime>\",\n  \"email\": \"<string>\",\n  \"photo\": \"<string>\",\n  \"telephone\": \"<string>\",\n  \"linkedin\": \"<string>\",\n  \"gitHub\": \"<string>\",\n  \"instagram\": \"<string>\",\n  \"facebook\": \"<string>\"\n}"
+										}
+									]
+								},
+								{
+									"name": "delete Collaborator",
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "{{bearerToken}}",
+													"type": "string"
+												}
+											]
+										},
+										"method": "DELETE",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "*/*"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/collaborators/collaborator/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"collaborators",
+												"collaborator",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "<long>"
+												}
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "OK",
+											"originalRequest": {
+												"method": "DELETE",
+												"header": [
+													{
+														"key": "Accept",
+														"value": "*/*"
+													},
+													{
+														"description": "Added as a part of security scheme: bearer",
+														"key": "Authorization",
+														"value": "Bearer <token>"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/collaborators/collaborator/:id",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"collaborators",
+														"collaborator",
+														":id"
+													],
+													"variable": [
+														{
+															"key": "id"
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "*/*"
+												}
+											],
+											"cookie": [],
+											"body": "{}"
+										}
+									]
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "register",
+					"item": [
+						{
+							"name": "sign Up",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{bearerToken}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "*/*"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"birthDate\": \"<dateTime>\",\n  \"fullName\": \"<string>\",\n  \"photo\": \"<string>\",\n  \"email\": \"g=Ib\\\"|~@neki-it.com.br\",\n  \"socialName\": \"<string>\",\n  \"telephone\": \"<string>\",\n  \"linkedin\": \"<string>\",\n  \"gitHub\": \"<string>\",\n  \"instagram\": \"<string>\",\n  \"facebook\": \"<string>\"\n}",
+									"options": {
+										"raw": {
+											"headerFamily": "json",
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/collaborators/register",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"collaborators",
+										"register"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "OK",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											},
+											{
+												"key": "Accept",
+												"value": "*/*"
+											},
+											{
+												"description": "Added as a part of security scheme: bearer",
+												"key": "Authorization",
+												"value": "Bearer <token>"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"birthDate\": \"<dateTime>\",\n  \"fullName\": \"<string>\",\n  \"photo\": \"<string>\",\n  \"email\": \"g=Ib\\\"|~@neki-it.com.br\",\n  \"socialName\": \"<string>\",\n  \"telephone\": \"<string>\",\n  \"linkedin\": \"<string>\",\n  \"gitHub\": \"<string>\",\n  \"instagram\": \"<string>\",\n  \"facebook\": \"<string>\"\n}",
+											"options": {
+												"raw": {
+													"headerFamily": "json",
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/collaborators/register",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"collaborators",
+												"register"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "*/*"
+										}
+									],
+									"cookie": [],
+									"body": "{}"
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "registerAvatar",
+					"item": [
+						{
+							"name": "{email}",
+							"item": [
+								{
+									"name": "sign Up 1",
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "{{bearerToken}}",
+													"type": "string"
+												}
+											]
+										},
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											},
+											{
+												"key": "Accept",
+												"value": "*/*"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"photo\": \"<string>\"\n}",
+											"options": {
+												"raw": {
+													"headerFamily": "json",
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/collaborators/registerAvatar/:email",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"collaborators",
+												"registerAvatar",
+												":email"
+											],
+											"variable": [
+												{
+													"key": "email",
+													"value": "<string>"
+												}
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "OK",
+											"originalRequest": {
+												"method": "POST",
+												"header": [
+													{
+														"key": "Content-Type",
+														"value": "application/json"
+													},
+													{
+														"key": "Accept",
+														"value": "*/*"
+													},
+													{
+														"description": "Added as a part of security scheme: bearer",
+														"key": "Authorization",
+														"value": "Bearer <token>"
+													}
+												],
+												"body": {
+													"mode": "raw",
+													"raw": "{\n  \"photo\": \"<string>\"\n}",
+													"options": {
+														"raw": {
+															"headerFamily": "json",
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{baseUrl}}/collaborators/registerAvatar/:email",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"collaborators",
+														"registerAvatar",
+														":email"
+													],
+													"variable": [
+														{
+															"key": "email"
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "*/*"
+												}
+											],
+											"cookie": [],
+											"body": "<string>"
+										}
+									]
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "avatar",
+					"item": [
+						{
+							"name": "{avatar}",
+							"item": [
+								{
+									"name": "get Avatar",
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "*/*"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/collaborators/avatar/:avatar",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"collaborators",
+												"avatar",
+												":avatar"
+											],
+											"variable": [
+												{
+													"key": "avatar",
+													"value": "<string>"
+												}
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "OK",
+											"originalRequest": {
+												"method": "GET",
+												"header": [
+													{
+														"key": "Accept",
+														"value": "*/*"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/collaborators/avatar/:avatar",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"collaborators",
+														"avatar",
+														":avatar"
+													],
+													"variable": [
+														{
+															"key": "avatar"
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "*/*"
+												}
+											],
+											"cookie": [],
+											"body": "[\n  \"<string>\",\n  \"<string>\"\n]"
+										}
+									]
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "list All Colaborators",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{bearerToken}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "*/*"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/collaborators",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"collaborators"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "OK",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "*/*"
+									},
+									{
+										"description": "Added as a part of security scheme: bearer",
+										"key": "Authorization",
+										"value": "Bearer <token>"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/collaborators",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"collaborators"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "*/*"
+								}
+							],
+							"cookie": [],
+							"body": "[\n  {\n    \"id\": \"<long>\",\n    \"fullName\": \"<string>\",\n    \"socialName\": \"<string>\",\n    \"birthDate\": \"<dateTime>\",\n    \"email\": \"<string>\",\n    \"photo\": \"<string>\",\n    \"telephone\": \"<string>\",\n    \"linkedin\": \"<string>\",\n    \"gitHub\": \"<string>\",\n    \"instagram\": \"<string>\",\n    \"facebook\": \"<string>\"\n  },\n  {\n    \"id\": \"<long>\",\n    \"fullName\": \"<string>\",\n    \"socialName\": \"<string>\",\n    \"birthDate\": \"<dateTime>\",\n    \"email\": \"<string>\",\n    \"photo\": \"<string>\",\n    \"telephone\": \"<string>\",\n    \"linkedin\": \"<string>\",\n    \"gitHub\": \"<string>\",\n    \"instagram\": \"<string>\",\n    \"facebook\": \"<string>\"\n  }\n]"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "roles",
+			"item": [
+				{
+					"name": "save",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Accept",
+								"value": "*/*"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"id\": \"<integer>\",\n  \"name\": \"ROLE_MODERATOR\"\n}",
+							"options": {
+								"raw": {
+									"headerFamily": "json",
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/roles",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"roles"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "OK",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "*/*"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"id\": \"<integer>\",\n  \"name\": \"ROLE_MODERATOR\"\n}",
+									"options": {
+										"raw": {
+											"headerFamily": "json",
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/roles",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"roles"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "*/*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n  \"id\": \"<integer>\",\n  \"name\": \"ROLE_MODERATOR\"\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "auth",
+			"item": [
+				{
+					"name": "signup",
+					"item": [
+						{
+							"name": "register User",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "*/*"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"email\": \"<string>\",\n  \"password\": \"<string>\",\n  \"username\": \"<string>\",\n  \"role\": [\n    \"<string>\",\n    \"<string>\"\n  ]\n}",
+									"options": {
+										"raw": {
+											"headerFamily": "json",
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/auth/signup",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"auth",
+										"signup"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "OK",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											},
+											{
+												"key": "Accept",
+												"value": "*/*"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"email\": \"<string>\",\n  \"password\": \"<string>\",\n  \"username\": \"<string>\",\n  \"role\": [\n    \"<string>\",\n    \"<string>\"\n  ]\n}",
+											"options": {
+												"raw": {
+													"headerFamily": "json",
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/auth/signup",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"auth",
+												"signup"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "*/*"
+										}
+									],
+									"cookie": [],
+									"body": "{}"
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "signin",
+					"item": [
+						{
+							"name": "authenticate User",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "*/*"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"password\": \"<string>\",\n  \"username\": \"<string>\"\n}",
+									"options": {
+										"raw": {
+											"headerFamily": "json",
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/auth/signin",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"auth",
+										"signin"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "OK",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											},
+											{
+												"key": "Accept",
+												"value": "*/*"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"password\": \"<string>\",\n  \"username\": \"<string>\"\n}",
+											"options": {
+												"raw": {
+													"headerFamily": "json",
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/auth/signin",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"auth",
+												"signin"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "*/*"
+										}
+									],
+									"cookie": [],
+									"body": "{}"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "test",
+			"item": [
+				{
+					"name": "user",
+					"item": [
+						{
+							"name": "user Access",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{bearerToken}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "*/*"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/test/user",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"test",
+										"user"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "OK",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "*/*"
+											},
+											{
+												"description": "Added as a part of security scheme: bearer",
+												"key": "Authorization",
+												"value": "Bearer <token>"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/test/user",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"test",
+												"user"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "*/*"
+										}
+									],
+									"cookie": [],
+									"body": "<string>"
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "mod",
+					"item": [
+						{
+							"name": "moderator Access",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{bearerToken}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "*/*"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/test/mod",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"test",
+										"mod"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "OK",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "*/*"
+											},
+											{
+												"description": "Added as a part of security scheme: bearer",
+												"key": "Authorization",
+												"value": "Bearer <token>"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/test/mod",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"test",
+												"mod"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "*/*"
+										}
+									],
+									"cookie": [],
+									"body": "<string>"
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "all",
+					"item": [
+						{
+							"name": "all Access",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "*/*"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/test/all",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"test",
+										"all"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "OK",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "*/*"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/test/all",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"test",
+												"all"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "*/*"
+										}
+									],
+									"cookie": [],
+									"body": "<string>"
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "admin",
+					"item": [
+						{
+							"name": "admin Access",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{bearerToken}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "*/*"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/test/admin",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"test",
+										"admin"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "OK",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "*/*"
+											},
+											{
+												"description": "Added as a part of security scheme: bearer",
+												"key": "Authorization",
+												"value": "Bearer <token>"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/test/admin",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"test",
+												"admin"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "*/*"
+										}
+									],
+									"cookie": [],
+									"body": "<string>"
+								}
+							]
+						}
+					]
+				}
+			]
+		}
+	],
+	"variable": [
+		{
+			"key": "baseUrl",
+			"value": "http://localhost:8080/api"
+		}
+	]
+}
